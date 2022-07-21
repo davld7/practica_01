@@ -16,7 +16,7 @@ namespace practica_01
             {
                 Console.WriteLine("Duración representado en minutos.");
                 Console.WriteLine("Modelo salón a = 5, Modelo salón b = 8, Modelo salón c = 6.");
-                Console.WriteLine("Ingrese el modelo del salón (a,b,c) x para salir:");
+                Console.WriteLine("Ingrese el modelo del salón (a,b,c), (h) para ver horas acumuladas (x) para salir:");
                 modelo = Console.ReadLine();
                 switch (modelo)
                 {
@@ -39,6 +39,12 @@ namespace practica_01
                         total_minutos = int.Parse(Console.ReadLine()) * modelo_c;
                         horas = total_minutos / 60;
                         minutos = total_minutos % 60;
+                        Tiempo_total(horas, minutos);
+                        break;
+                    case "h":
+                        Console.WriteLine("Las horas acumuladas es igual a:");
+                        horas = minutos_acumulados / 60;
+                        minutos = minutos_acumulados % 60;
                         Tiempo_total(horas, minutos);
                         break;
                     default:
